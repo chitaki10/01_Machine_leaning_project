@@ -1,1 +1,113 @@
+# =========================
+# Python bytecode & cache
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Virtual environments
+# =========================
+venv/
+env/
+.venv/
+.conda/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# =========================
+# ML / Data Science files
+# =========================
+data/
+datasets/
+raw_data/
+processed_data/
+*.csv
+*.tsv
+*.xlsx
+*.parquet
+*.h5
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# =========================
+# Model artifacts
+# =========================
+models/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.ckpt
+
+# =========================
+# Logs & outputs
+# =========================
+logs/
+*.log
+outputs/
+results/
+
+# =========================
+# Experiment tracking
+# =========================
+mlruns/
+wandb/
+tensorboard/
+runs/
+
+# =========================
+# IDE / Editor settings
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Build / packaging
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Testing & coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# FastAPI / backend extras
+# =========================
+uploads/
+staticfiles/
+
+# =========================
+# Secrets & credentials
+# =========================
+*.pem
+*.key
+credentials.json
+secrets.json
 
