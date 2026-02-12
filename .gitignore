@@ -1,113 +1,52 @@
-# =========================
-# Python bytecode & cache
-# =========================
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
 
-# =========================
-# Virtual environments
-# =========================
-venv/
+# Virtual Environment
 myenv/
-.venv/
-.conda/
+venv/
+env/
+ENV/
 
-# =========================
-# Environment variables
-# =========================
-.env
-.env.*
-!.env.example
-
-# =========================
-# Jupyter Notebook
-# =========================
+# Jupyter Notebooks
 .ipynb_checkpoints/
-*.nbconvert.ipynb
+*.ipynb
 
-# =========================
-# ML / Data Science files
-# =========================
-data/
-datasets/
-raw_data/
-processed_data/
-*.csv
-*.tsv
-*.xlsx
-*.parquet
-*.h5
-*.pkl
-*.joblib
-*.npy
-*.npz
+# ML Artifacts (DON'T commit large model files!)
+artifacts/*.pkl
+artifacts/*.csv
+artifacts/*.h5
+artifacts/*.joblib
 
-# =========================
-# Model artifacts
-# =========================
-models/
-checkpoints/
-*.pt
-*.pth
-*.onnx
-*.h5
-*.ckpt
+# Keep the artifacts directory but not its contents
+!artifacts/.gitkeep
 
-# =========================
-# Logs & outputs
-# =========================
-logs/
-*.log
-outputs/
-results/
-
-# =========================
-# Experiment tracking
-# =========================
-mlruns/
-wandb/
-tensorboard/
-runs/
-
-# =========================
-# IDE / Editor settings
-# =========================
+# IDE
 .vscode/
 .idea/
-*.iml
+*.swp
+*.swo
 
-# =========================
-# OS files
-# =========================
+# OS
 .DS_Store
 Thumbs.db
 
-# =========================
-# Build / packaging
-# =========================
-build/
-dist/
-*.egg-info/
+# Environment variables
+.env
+.env.local
 
-# =========================
-# Testing & coverage
-# =========================
-.pytest_cache/
-.coverage
-htmlcov/
+# Logs
+*.log
+logs/
 
-# =========================
-# FastAPI / backend extras
-# =========================
-uploads/
-staticfiles/
-
-# =========================
-# Secrets & credentials
-# =========================
-*.pem
-*.key
-credentials.json
-secrets.json
-
+# Data (if you have large datasets)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
