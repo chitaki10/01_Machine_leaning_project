@@ -11,7 +11,7 @@ from sklearn.ensemble import (
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
-from sklearn.neighbors import KNeighborsRegressor  # correct
+from sklearn.neighbors import KNeighborsRegressor  
 from catboost import CatBoostRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
@@ -49,12 +49,53 @@ class ModelTrainer:
                 "Gradient Boosting Regressor": GradientBoostingRegressor(),
                 "KNN Regressor": KNeighborsRegressor(),
                 "AdaBoost Regressor": AdaBoostRegressor(),
-                "CatBoost Regressor": CatBoostRegressor(verbose=False),
+                #"CatBoost Regressor": CatBoostRegressor(verbose=False),
 
             }  
 
+            params = {
+                "Random Forest Regressor": {
+                    'n_estimators': [100, 200, 500],
+                    'max_depth': [10, 20, 30, None],
+                    'min_samples_split': [2, 5, 10],
+                    'min_samples_leaf': [1, 2, 4],
+                    'max_features': ['sqrt', 'log2', None]
+                },
+                
+                "Decision Tree Regressor": {
+                    'max_depth': [5, 10, 20, 30, None],
+                    'min_samples_split': [2, 5, 10, 20],
+                    'min_samples_leaf': [1, 2, 4, 8],
+                    'max_features': ['sqrt', 'log2', None]
+                },
+                
+                "Gradient Boosting Regressor": {
+                    'n_estimators': [100, 200, 500],
+                    'learning_rate': [0.01, 0.1, 0.2],
+                    'max_depth': [3, 5, 7],
+                    'min_samples_split': [2, 5],
+                    'subsample': [0.8, 1.0]
+                },
+                
+                "KNN Regressor": {
+                    'n_neighbors': [3, 5, 7, 9, 15],
+                    'weights': ['uniform', 'distance'],
+                    'metric': ['minkowski', 'euclidean', 'manhattan'],
+                    'p': [1, 2]
+                },
+                
+                "AdaBoost Regressor": {
+                    'n_estimators': [50, 100, 200],
+                    'learning_rate': [0.01, 0.1, 1.0],
+                    'loss': ['linear', 'square', 'exponential']
+                },
+                
+                }
+            
 
-            model_report:dict = evaluate_models(X_train=X_train, y_train= y_train, X_test = X_test, y_test=y_test, models= models) 
+
+
+            model_report:dict = evaluate_models(X_train=X_train, y_train= y_train, X_test = X_test, y_test=y_test, models= models,params = params) 
 
 
             best_model_score = max(model_report.values())
@@ -70,6 +111,7 @@ class ModelTrainer:
                 raise CustomException( "No best model found")
             logging.info(f' best found model on both training and testing datasets')
             logging.info(f' the best score among the model is {best_model_score}')
+            logging.info(f' the best score among the model is {best_model_name}')
 
 
             save_object(

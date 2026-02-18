@@ -13,6 +13,9 @@ from src.components.data_transformation import DataTransformationConfig
 from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import ModelTrainerConfig
 from src.components.model_trainer import ModelTrainer
+import os
+os.environ['LOKY_MAX_CPU_COUNT'] = '4'  
+
 
 @dataclass
 class DataIngestionConfig:
