@@ -71,7 +71,7 @@ This dataset provides a realistic basis for regression modeling of student perfo
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/chitaki10/01_Machine_leaning_project
+https://github.com/chitaki10/01_Machine_leaning_project](https://github.com/chitaki10/Student_Performance_Prediction_Web_App
 cd student-performance-prediction
 ```
 
@@ -194,4 +194,4 @@ MIT License
 GitHub:https://github.com/chitaki10
 
 Project Link:  
-https://github.com/chitaki10/01_Machine_leaning_project
+https://github.com/chitaki10/01_Machine_leaning_project](https://github.com/chitaki10/Student_Performance_Prediction_Web_App
