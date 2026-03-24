@@ -185,13 +185,7 @@ student-performance-prediction/
 
 ## License
 
-MIT License
 
----
-
-## Contact
-
-GitHub:https://github.com/chitaki10
 
 Project Link:  
 https://github.com/chitaki10/01_Machine_leaning_project](https://github.com/chitaki10/Student_Performance_Prediction_Web_App
