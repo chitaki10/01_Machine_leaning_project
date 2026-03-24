@@ -181,10 +181,6 @@ student-performance-prediction/
 └── templates/
 ```
 
----
-
-## License
-
 
 
 Project Link:  
